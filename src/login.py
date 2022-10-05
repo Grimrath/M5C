@@ -1,15 +1,4 @@
-def menu(title, prompt, options):
-    print(f"{title}")
-    for key, value in options.items():
-        print(f"    {key}) {value}")
-    
-    invalid_input = True
-    while invalid_input:
-        selected = input(prompt)
-        if selected in options:
-            invalid_input = False
-    
-    return selected
+from menu import menu
 
 
 def login(users):
@@ -17,10 +6,12 @@ def login(users):
         username = input("    User: ")
         password = input("Password: ")
         if username in users and users[username] == password:
+            # A newline for nice formatting's sake.
             print()
             return username
         else:
             options = {"r":"Try again", "q":"Quit"}
             if menu("Invalid username or password", "Option: ", options) == "q":
+                # A newline for nice formatting's sake.
                 print()
                 return None
