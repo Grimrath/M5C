@@ -17,8 +17,10 @@ def login(users):
         username = input("    User: ")
         password = input("Password: ")
         if username in users and users[username] == password:
+            print()
             return username
         else:
             options = {"r":"Try again", "q":"Quit"}
             if menu("Invalid username or password", "Option: ", options) == "q":
-                return
+                print()
+                return None
