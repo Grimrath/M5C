@@ -7,6 +7,7 @@ def main():
     data  = {"nisse":["luva", "vante"],  "stina":[], "bosse":["gräs", "mjölk"]}
 
     while True:
+        print("Welcome to Lagra (TM)", end="\n\n")
         logged_in_user = login(users)
         if logged_in_user != None:
             user_actions(logged_in_user, data[logged_in_user])
