@@ -1,5 +1,5 @@
 ducks = ["Huey", "Dewey", "Louie"]
 
-print(ducks)
+print(f"List of ducks: {ducks}")
 ducks.append(input("Add a duck: "))
-print(ducks)
+print(f"Updated list of ducks: {ducks}")
