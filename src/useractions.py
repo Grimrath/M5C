@@ -13,11 +13,14 @@ def user_actions(user, items):
     while logged_in:
         selection = menu("Select an action", "Option: ", options)
         if selection == "a":
+            print()
             add("Add an item: ", items)
         elif selection == "v":
+            print()
             view("These are your items", items)
         elif selection == "l":
             logged_in = False
+            print()
             return items
 
     
