@@ -30,7 +30,6 @@ def login(users):
 
 
 def menu(title, prompt, options):
-    # Printing is an allowed side-effect
     print(f"{title}", end="\n\n")
     for key, value in options.items():
         print(f"    {key}) {value}")
@@ -42,7 +41,7 @@ def menu(title, prompt, options):
 
 
 def user_actions(user, items):
-    print(f"Welcome, {user}!")
+    print(f"Welcome, {user}!", end="\n\n")
     view("These are your items", items)
 
     options = {"a":"Add an item", "v":"View items", "l":"Log out"}
@@ -53,6 +52,7 @@ def user_actions(user, items):
         if selection == "a":
             print()     # A newline for nice formatting's sake.
             add("Add an item: ", items)
+            print()     # A newline for nice formatting's sake.
         elif selection == "v":
             print()     # A newline for nice formatting's sake.
             view("These are your items", items)
@@ -63,13 +63,11 @@ def user_actions(user, items):
 
 
 def view(description, strings):
-    # Printing is an allowed side effect
-    print(description)
+    print(description, end="\n\n")
     for i, string in enumerate(strings):
-        print(f"    {i}) {string}")
+        print(f"    {i + 1}) {string}")
     print()     # A newline for nice formatting's sake.
     return
-
 
 
 if __name__ == "__main__":
