@@ -12,7 +12,6 @@ for key, value in users.items():
     
 
 print("Användare och deras data:", end="\n\n")
-
 for key,value in data.items():
     print(f"    {key}) {value}")
     
@@ -20,8 +19,6 @@ for key,value in data.items():
 user = input("Slå upp användare: ")
 print()
 if user in users:
-    print(f"Data lagrat för {user}: {data[user]}")
-    print()
+    print(f"Data lagrat för {user}: {data[user]}", end="\n\n")
 else:
-    print(f"User '{user}' not found.")
-    print()
+    print(f"User '{user}' not found.", end="\n\n")
