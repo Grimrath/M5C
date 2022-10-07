@@ -4,16 +4,17 @@ def add(prompt, strings):
 
 
 def view(description, strings):
-    print(description + "\n")
+    print(description)
     for i, string in enumerate(strings):
-        print(f"    {i}) {string}")
+        print(f"    {i + 1}) {string}")
     return
 
 
 n = 5
 list_of_stuff = []
 
+print(f"n = {n}")
 for _ in range(n):
     add("lägg till en sträng: ", list_of_stuff)
     
-view("du har matat in", list_of_stuff)
+view(f"Du har matat in följande {n} strängar:", list_of_stuff)
